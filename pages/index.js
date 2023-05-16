@@ -7,7 +7,10 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  Button,
+  Heading
 } from '@chakra-ui/react'
+import { ArrowForwardIcon } from '@chakra-ui/icons'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +24,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>hola</h1>
+        <Heading color="neutrals.gray.light">hola</Heading>
+        <Button variant="primary">Primary Button</Button>
+        <Button  variant='outline'>Primary Button</Button>
+        <Button  bg='brand.primary.default'>Primary Button</Button>
+      <Button rightIcon={<ArrowForwardIcon />}></Button>
+
         <Alert status='error'>
   <AlertIcon />
   <AlertTitle>Your browser is outdated!</AlertTitle>
