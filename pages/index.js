@@ -52,6 +52,7 @@ import { Sidebar } from "../components/Sidebar";
 import {TaskBadge} from "../components/TaskBadge";
 import {UserBadge} from "../components/UserBadge";
 import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
+import { TimeTrackingResume } from "@/components/TimeTrackingResume";
 
 
 const { definePartsStyle, defineMultiStyleConfig } =
@@ -93,7 +94,7 @@ export default function Home() {
         <Flex as="main" w="full" h="full" bg="white">
           {/* Starts second column */}
           <Flex
-            w="75%"
+            w="80%"
             p="2%"
             flexDirection="column"
             overflow="auto"
@@ -582,7 +583,7 @@ export default function Home() {
             </Flex>
           </Flex>
           <Flex
-            w="25%"
+            w="20%"
             p="1%"
             flexDirection="column"
             overflow="auto"
@@ -599,83 +600,9 @@ export default function Home() {
 
             <HStack mt={6}>
             <TimeTrackingCollapse/>
+          
             </HStack>
-            <Box
-              bg="neutrals.light.600"
-              w="100%"
-              px={3}
-              py={6}
-              display="flex"
-              flexDirection="column"
-              borderRadius="lg"
-              mt={4}
-            >
-              <Flex justify="flex-start">
-                <Badge
-                  bgColor="brand.secondary.default"
-                  w={24}
-                  borderRadius="md"
-                  py={2}
-                >
-                  <Text
-                    fontSize="0.7rem"
-                    color="neutrals.light.100"
-                    fontWeight="bold"
-                    textAlign="center"
-                  >
-                    TIMER IS ON
-                  </Text>
-                </Badge>
-              </Flex>
-              <Flex flexDirection="column">
-                <Text textAlign="center" color="neutrals.light.gray">
-                  Task: #78
-                </Text>
-                <Text
-                  textAlign="center"
-                  fontWeight="bold"
-                  color="neutrals.gray.navy"
-                >
-                  Create project page with all tabs
-                </Text>
-                <Text textAlign="center" fontSize="4xl">
-                  01:34
-                </Text>
-              </Flex>
-              <Center>
-                <HStack borderRadius="lg" borderColor="neutrals.gray.ash">
-                  <HStack>
-                    <HStack>
-                      <IconButton
-                        aria-label="Search database"
-                        bgColor="brand.primary.default"
-                        icon={<Search2Icon />}
-                        rounded="full"
-                        color="neutrals.light.100"
-                      />
-                      <Text fontWeight="bold" color="brand.primary.default">
-                        Pause
-                      </Text>
-                    </HStack>
-                  </HStack>
-                  <Divider orientation="vertical" />
-                  <HStack>
-                    <HStack>
-                      <Text fontWeight="bold" color="semantic.success.green">
-                        Complete
-                      </Text>
-                      <IconButton
-                        aria-label="Search database"
-                        bgColor="semantic.success.green"
-                        icon={<Search2Icon />}
-                        rounded="full"
-                        color="neutrals.light.100"
-                      />
-                    </HStack>
-                  </HStack>
-                </HStack>
-              </Center>
-            </Box>
+            <TimeTrackingResume/>
             <HStack mt={8}>
               <Text fontSize="2xl" fontWeight="bold">
                 Task Description
