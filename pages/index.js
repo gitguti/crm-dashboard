@@ -49,6 +49,8 @@ import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react";
 import { useState } from "react";
 import { Sidebar } from "../components/Sidebar";
 import {TaskBadge} from "../components/TaskBadge";
+import {UserBadge} from "../components/UserBadge";
+
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(checkboxAnatomy.keys);
@@ -587,39 +589,10 @@ export default function Home() {
           >
             <Flex justifyContent="space-between">
               <TaskBadge/>
-              <Divider orientation="vertical" />
-              <Flex alignItems="center">
-                <Avatar
-                  name="Ryan Florence"
-                  src="https://bit.ly/ryan-florence"
-                />
-                <VStack>
-                  <Text>User</Text>
-                  <Text>Kolin F.</Text>
-                </VStack>
-                <Menu>
-                  <MenuButton
-                    as={IconButton}
-                    aria-label="Options"
-                    icon={<HamburgerIcon />}
-                    variant="outline"
-                  />
-                  <MenuList>
-                    <MenuItem icon={<AddIcon />} command="⌘T">
-                      New Tab
-                    </MenuItem>
-                    <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
-                      New Window
-                    </MenuItem>
-                    <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
-                      Open Closed Tab
-                    </MenuItem>
-                    <MenuItem icon={<EditIcon />} command="⌘O">
-                      Open File...
-                    </MenuItem>
-                  </MenuList>
-                </Menu>
-              </Flex>
+              <Center>
+              <Divider orientation="vertical" height="20px"/>
+              </Center>
+              <UserBadge/>
             </Flex>
             <HStack mt={6}>
               <Text fontSize="2xl" fontWeight="bold">

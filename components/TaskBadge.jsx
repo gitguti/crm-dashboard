@@ -36,6 +36,7 @@ export const TaskBadge = () => {
                 isRound
                 size="xs"
                 variant="ghost"
+                ml={1}
                 />
               </Flex>
     </>
