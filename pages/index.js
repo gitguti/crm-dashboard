@@ -19,10 +19,8 @@ import {
 import { ArrowForwardIcon, Search2Icon, DragHandleIcon, HamburgerIcon, AddIcon,ExternalLinkIcon, RepeatIcon,EditIcon,ArrowDownIcon } from '@chakra-ui/icons'
 import { checkboxAnatomy } from '@chakra-ui/anatomy'
 import { createMultiStyleConfigHelpers, defineStyle } from '@chakra-ui/react'
-import {Sidebar} from "../components/Sidebar"
 import {useState} from "react"
-import { MdMenu } from "react-icons/md";
-import {Test} from "../components/test"
+import {Sidebar} from "../components/Sidebar"
 
 
 const { definePartsStyle, defineMultiStyleConfig } =
@@ -38,16 +36,8 @@ export const checkboxTheme = defineMultiStyleConfig({
   variants: { circular },
 })
 
-
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
-  const [collapse, setCollapse] = useState(false);
-
-  const handleCollapseChange = (newCollapse) => {
-  setCollapse(newCollapse);
-};
-
+  const [collapse, setCollapse] = useState({index: null, state:false});
   return (
     <>
       <Head>
@@ -56,33 +46,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <main className={`${styles.main} ${inter.className}`}>
-        <Heading color="neutrals.gray.light">hola</Heading>
-        <Button variant="primary">Primary Button</Button>
-        <Button  variant='outline'>Primary Button</Button>
-        <Button  bg='brand.primary.default'>Primary Button</Button>
-      <Button rightIcon={<ArrowForwardIcon />}></Button>
-      </main> */}
       <Flex h="100vh" flexDirection="row" overflow="hidden" maxWidth="2000px">
         <Flex
         as="aside"
         w="full"
         h="full"
-        maxW={collapse ? 350 : 100}
+        maxW={collapse.state ? 350 : 100}
         bg="white"
         alignItems="start"
         flexDirection="column"
-        transition="ease-in-out .2s"
-      >
-        {/* <Sidebar collapse={collapse} /> */}
-        <Test onCollapseChange={handleCollapseChange}/>
-        {/* <IconButton
-          aria-label="Menu Colapse"
-          icon={<MdMenu />}
-          top={6}
-          left={6}
-          onClick={() => setCollapse(!collapse)}
-        /> */}
+        transition="ease-in-out .2s">
+        <Sidebar setCollapse={setCollapse} collapse={collapse}/>
+
         
         </Flex>
         <Flex
