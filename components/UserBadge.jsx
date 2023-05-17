@@ -8,9 +8,6 @@ import {
     IconButton
   } from "@chakra-ui/react";
   import {
-    MdCheck
-  } from "react-icons/md";
-  import {
     ChevronDownIcon
   } from '@chakra-ui/icons'
 

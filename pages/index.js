@@ -43,6 +43,7 @@ import {
   RepeatIcon,
   EditIcon,
   ArrowDownIcon,
+  ChevronRightIcon
 } from "@chakra-ui/icons";
 import { checkboxAnatomy } from "@chakra-ui/anatomy";
 import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react";
@@ -50,6 +51,7 @@ import { useState } from "react";
 import { Sidebar } from "../components/Sidebar";
 import {TaskBadge} from "../components/TaskBadge";
 import {UserBadge} from "../components/UserBadge";
+import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
 
 
 const { definePartsStyle, defineMultiStyleConfig } =
@@ -594,14 +596,9 @@ export default function Home() {
               </Center>
               <UserBadge/>
             </Flex>
+
             <HStack mt={6}>
-              <Text fontSize="2xl" fontWeight="bold">
-                Time Tracking
-              </Text>
-              <Spacer />
-              <Button variant="outline" rightIcon={<ArrowDownIcon />}>
-                Hide Window
-              </Button>
+            <TimeTrackingCollapse/>
             </HStack>
             <Box
               bg="neutrals.light.600"
