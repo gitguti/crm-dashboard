@@ -75,7 +75,7 @@ export const Test = ({onCollapseChange}) => {
         {collapse && (
           <Stack spacing={2}>
             {selectedItems.map((item, idx) => (
-              <Text key={idx} ml={4}>
+              <Text key={idx} px={4}>
                 {item.label} - {item.value}
               </Text>
             ))}
