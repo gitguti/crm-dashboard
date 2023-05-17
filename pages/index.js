@@ -22,6 +22,7 @@ import { createMultiStyleConfigHelpers, defineStyle } from '@chakra-ui/react'
 import {Sidebar} from "../components/Sidebar"
 import {useState} from "react"
 import { MdMenu } from "react-icons/md";
+import {Test} from "../components/test"
 
 
 const { definePartsStyle, defineMultiStyleConfig } =
@@ -42,6 +43,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [collapse, setCollapse] = useState(false);
+
+  const handleCollapseChange = (newCollapse) => {
+  setCollapse(newCollapse);
+};
+
   return (
     <>
       <Head>
@@ -65,19 +71,18 @@ export default function Home() {
         maxW={collapse ? 350 : 100}
         bg="white"
         alignItems="start"
-        padding={6}
         flexDirection="column"
         transition="ease-in-out .2s"
       >
-        <Sidebar collapse={collapse} />
-        <IconButton
+        {/* <Sidebar collapse={collapse} /> */}
+        <Test onCollapseChange={handleCollapseChange}/>
+        {/* <IconButton
           aria-label="Menu Colapse"
           icon={<MdMenu />}
-          position="absolute"
           top={6}
           left={6}
           onClick={() => setCollapse(!collapse)}
-        />
+        /> */}
         
         </Flex>
         <Flex
