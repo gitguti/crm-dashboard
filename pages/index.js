@@ -48,6 +48,7 @@ import { checkboxAnatomy } from "@chakra-ui/anatomy";
 import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react";
 import { useState } from "react";
 import { Sidebar } from "../components/Sidebar";
+import {TaskBadge} from "../components/TaskBadge";
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(checkboxAnatomy.keys);
@@ -585,20 +586,7 @@ export default function Home() {
             bg="neutrals.light.100"
           >
             <Flex justifyContent="space-between">
-              <Flex alignItems="center">
-                <IconButton
-                  aria-label="Search database"
-                  bgColor="semantic.success.green"
-                  icon={<Search2Icon />}
-                  rounded="full"
-                  color="neutrals.light.100"
-                />
-                <Spacer />
-                <VStack>
-                  <Text fontSize="xs">Project CRM</Text>
-                  <Text>Task: #78</Text>
-                </VStack>
-              </Flex>
+              <TaskBadge/>
               <Divider orientation="vertical" />
               <Flex alignItems="center">
                 <Avatar
