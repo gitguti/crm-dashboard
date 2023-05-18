@@ -7,7 +7,7 @@ export const TimeTrackingCollapse = () => {
   return (
     <>
       <VStack mt={6} align="start">
-        <HStack mb={4}>
+        <HStack mb={4} width="100%">
           <Text fontSize="xl" color="brand.primary.navy" fontWeight="bold">
             Time Tracking
           </Text>

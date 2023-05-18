@@ -53,6 +53,7 @@ import {TaskBadge} from "../components/TaskBadge";
 import {UserBadge} from "../components/UserBadge";
 import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
 import { TimeTrackingResume } from "@/components/TimeTrackingResume";
+import { TaskDescription } from "@/components/TaskDescription";
 
 
 const { definePartsStyle, defineMultiStyleConfig } =
@@ -601,8 +602,8 @@ export default function Home() {
             <TimeTrackingCollapse/>
           
           
-            <HStack mt={8}>
-              <Text fontSize="2xl" fontWeight="bold">
+            <HStack mt={0}>
+              {/* <Text fontSize="2xl" fontWeight="bold">
                 Task Description
               </Text>
               <Spacer />
@@ -611,32 +612,11 @@ export default function Home() {
                 bgColor="brand.primary.default"
                 icon={<Search2Icon />}
                 color="neutrals.light.100"
-              />
+              /> */}
+              <TaskDescription/>
             </HStack>
             <Divider />
-            <Flex flexDirection="row" justifyContent="space-between" mt={2}>
-              <Flex alignItems="center">
-                <Avatar
-                  name="Ryan Florence"
-                  src="https://bit.ly/ryan-florence"
-                />
-                <VStack>
-                  <Text>Contractor</Text>
-                  <Text>Kolin F.</Text>
-                </VStack>
-              </Flex>
-              <Divider orientation="vertical" />
-              <Flex alignItems="center">
-                <VStack>
-                  <Text>Author</Text>
-                  <Text>Nikolas P.</Text>
-                </VStack>
-                <Avatar
-                  name="Ryan Florence"
-                  src="https://bit.ly/ryan-florence"
-                />
-              </Flex>
-            </Flex>
+           
             <Box
               bg="neutrals.light.600"
               w="100%"
