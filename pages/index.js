@@ -617,23 +617,7 @@ export default function Home() {
             </HStack>
            
            <TaskDescriptionResume/>
-            <HStack mt={4}>
-              <VStack>
-                <Text fontSize="xs"> Created: 23 July 2020 at 8:23 pm</Text>
-                <Text fontSize="xs">Updated: 24 July 2020 at 6:12 pm</Text>
-              </VStack>
-              <Spacer />
-              <Button
-                color="semantic.error.red"
-                variant="outline"
-                borderRadius="full"
-                borderColor="semantic.error.red"
-                px={6}
-                py={2}
-              >
-                Delete Task
-              </Button>
-            </HStack>
+           
           </Flex>
         </Flex>
       </Flex>

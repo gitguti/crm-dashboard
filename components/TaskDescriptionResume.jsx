@@ -2,9 +2,7 @@ import React from 'react'
 import {
     Flex,
     Text,
-    IconButton,
-    Badge,
-    Divider,
+    VStack,
     Box,
     HStack,
     Button,
@@ -74,6 +72,24 @@ export const TaskDescriptionResume = () => {
                 <Spacer />
               </Flex>
             </Box>
+            <HStack mt={4}>
+              <VStack>
+                <Text fontSize="2xs"> Created: 23 July 2020 at 8:23 pm</Text>
+                <Text fontSize="2xs">Updated: 24 July 2020 at 6:12 pm</Text>
+              </VStack>
+              <Spacer />
+              <Button
+              size="sm"
+                color="semantic.error.red"
+                variant="outline"
+                borderRadius="full"
+                borderColor="semantic.error.red"
+                px={2}
+                py={4}
+              >
+                Delete Task
+              </Button>
+            </HStack>
     </>
   )
 }
