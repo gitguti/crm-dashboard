@@ -42,6 +42,8 @@ import {TaskList} from "@/components/TaskList";
 
 export default function Home() {
   const [collapse, setCollapse] = useState({ index: null, state: false });
+  const [taskSelect, setTaskSelect] = useState({})
+  console.log("taskSelect", taskSelect)
   return (
     <>
       <Head>
@@ -81,7 +83,7 @@ export default function Home() {
             <Stat symbol="$" concept="Yours & total earnings" number="1,695.00" detail="(4,695.00)" badgeColor="semantic.success.green" />
             <Stat symbol="%" concept="Project progress" number="34%" detail="(34/100)" badgeColor="brand.primary.default"/>
             </Flex>
-            <TaskList/>
+            <TaskList setTaskSelect={setTaskSelect}/>
           </Flex>
           <Flex
             w="20%"
@@ -105,7 +107,7 @@ export default function Home() {
                 roleFontWeight="bold"
               />{" "}
             </Flex>
-            <TimeTrackingCollapse />
+            <TimeTrackingCollapse taskSelect={taskSelect} />
             <HStack mt={0}>
               <TaskDescription />
             </HStack>

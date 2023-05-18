@@ -12,7 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { MdPause, MdCheck } from "react-icons/md";
 
-export const TimeTrackingResume = () => {
+export const TimeTrackingResume = ({taskSelect }) => {
+  console.log(taskSelect, "Hola")
   return (
     <>
       <Box
@@ -39,7 +40,7 @@ export const TimeTrackingResume = () => {
               textAlign="center"
               textTransform="uppercase"
             >
-              Timer is on
+              {taskSelect.status}
             </Text>
           </Badge>
         </Flex>
@@ -51,7 +52,7 @@ export const TimeTrackingResume = () => {
             color="neutrals.gray.ash"
             mt={1}
           >
-            Task: #78
+            Task: # {taskSelect.id}
           </Text>
           <Text
             textAlign="center"
@@ -60,10 +61,10 @@ export const TimeTrackingResume = () => {
             fontSize="lg"
             mt={2}
           >
-            Create project page with all tabs
+          {taskSelect.title}
           </Text>
           <Text fontWeight="light" textAlign="center" fontSize="4xl" my={4}>
-            01:34
+          {taskSelect.time}
           </Text>
         </Flex>
         <Center>

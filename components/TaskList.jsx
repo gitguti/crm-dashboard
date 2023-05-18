@@ -3,6 +3,7 @@ import { Avatar, AvatarGroup, Box, Checkbox, Flex, IconButton, Text , Heading, S
 import { AddIcon, DragHandleIcon } from "@chakra-ui/icons";
 import {CiGrid31, CiCircleList} from "react-icons/ci";
 import { BsPlayFill, BsPauseFill, BsThreeDots } from "react-icons/bs";
+import { useState } from "react";
 
 
 
@@ -12,6 +13,7 @@ const List = [
         title: "Request server username & password",
         status: "In progress",
         time: "02:54",
+        id: "78",
         responsibles: [{
             name:"Ryan Florence",
         src:"https://bit.ly/ryan-florence"
@@ -28,9 +30,10 @@ const List = [
         src:"https://bit.ly/code-beast"}]
     },
     {
-        title: "Request server username & password",
+        title: "Change color pallete to more bright",
         status: "In progress",
         time: "play",
+        id: "25",
         responsibles: [{
             name:"Ryan Florence",
         src:"https://bit.ly/ryan-florence"
@@ -46,9 +49,10 @@ const List = [
       },{  name:"Christian Nwamba",
         src:"https://bit.ly/code-beast"}]
     },{
-        title: "Request server username & password",
+        title: "Create project page with all tabs",
         status: "In progress",
         time: "pause",
+        id: "33",
         responsibles: [{
             name:"Ryan Florence",
         src:"https://bit.ly/ryan-florence"
@@ -73,7 +77,13 @@ const AvatarList = (user) => {
         src={user.src}
       />)
 }
-const RowList = (Element) =>{
+const RowList = ({Element, setTaskSelect, idx, setIdxSelect,selected,idxSelect}) =>{
+  const toggleTodo = (todo) => {
+    console.log("todo", todo)
+    setTaskSelect(todo)
+    if (idxSelect === idx) return setIdxSelect(null)
+    setIdxSelect(idx)
+}
   const renderTime = () => {
     if (Element.time === "pause") {
       return (
@@ -117,15 +127,16 @@ const RowList = (Element) =>{
         alignItems="center"
         boxShadow={"md"}
       >
-            <Checkbox
+      <Checkbox
       variant="circular"
       size="sm"
       color="neutrals.gray.navy"
       w="60%"
       colorScheme="green"
       onChange={() => {
-        toggleTodo(todo);
+        toggleTodo(Element);
       }}
+      isChecked={selected}
     >
       {Element.title}
     </Checkbox>
@@ -153,7 +164,8 @@ const RowList = (Element) =>{
       </Box>)
 }
 
-export const TaskList = () => {
+export const TaskList = ({setTaskSelect}) => {
+  const [idxSelect, setIdxSelect] = useState(null)
     return (
     <>
     <Flex mt={12} alignItems="center" justifyContent="space-between">
@@ -215,7 +227,7 @@ export const TaskList = () => {
               />
             </Flex>
             </Flex>
-    {List.map(RowList)}
+            {List.map((element, idx)=> (<RowList Element={element} setTaskSelect={setTaskSelect} key={idx} idx={idx} selected={idxSelect===idx} setIdxSelect={setIdxSelect} idxSelect={idxSelect}/>))}
     </>
 )
 }
