@@ -19,6 +19,7 @@ import {
 } from "react-icons/fi";
 import { BsBattery, BsBatteryHalf, BsBatteryFull, BsCheck2Circle } from "react-icons/bs";
 import {VscBlank} from "react-icons/vsc"
+import {MdOutlineContentCopy} from "react-icons/md"
 import { Submenu } from "./Submenu";
 import { AddIcon } from "@chakra-ui/icons";
 
@@ -90,72 +91,248 @@ export const Sidebar = ({ collapse, setCollapse }) => {
         ], },
       ],
     },
-    // {
-    //   icon: <FiUser />,
-    //   items: [
-    //     {
-    //       label: "In process",
-    //       icon: "valor",
-    //       items: [
-    //         {
-    //           label: "World News",
-    //         },
-    //         {
-    //           label: "Project CRM",
-    //         },
-    //         {
-    //           label: "Trading Company",
-    //         },
-    //         {
-    //           label: "GMB Vault",
-    //         },
-    //       ],
-    //     },
-    //     { label: "Element",  },
-    //     { label: "Element 1-2",  },
-    //     { label: "Element 1-3", },
-    //   ],
-    // },
-    // {
-    //   icon: <FiSettings />,
-    //   items: [
-    //     {
-    //       label: "Element",
-    //       icon: "valor",
-    //       items: [
-    //         {
-    //           label: "Element",
-    //           icon: "valor",
-    //         },
-    //         {
-    //           label: "Element",
-    //           icon: "valor",
-    //         },
-    //       ],
-    //     },
-    //     { label: "Element", icon: "valor" },
-    //     { label: "Element 1-2", icon: "valor 1-2" },
-    //     { label: "Element 1-3", icon: "valor 1-3" },
-    //   ],
-    // },
-    // {
-    //   icon: <FiHelpCircle />,
-    //   items: [
-    //     {
-    //       label: "Element 1-1",
-    //       icon: "valor 1-1",
-    //       items: [
-    //         {
-    //           label: "Element 1-1",
-    //           icon: "valor 1-1",
-    //         },
-    //       ],
-    //     },
-    //     { label: "Element 1-1", icon: "valor 1-1" },
-    //     { label: "Element 1-2", icon: "valor 1-2" },
-    //     { label: "Element 1-3", icon: "valor 1-3" },
-    //   ],
-    // },
+    {
+      icon: <MdOutlineContentCopy />,
+      items: [
+        {
+          label: "All projects",
+          icon: <VscBlank/>,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        { label: "Not Started", icon: <BsBattery />, items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        {
+          label: "In progress",
+          icon: <BsBatteryHalf />,
+          items: [
+            {
+              label: "World News",
+            },
+            {
+              label: "Project CRM",
+            },
+            ,
+            {
+              label: "Trading Company",
+            },
+            ,
+            {
+              label: "GMB Vault",
+            },
+          ],
+        },
+        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        { label: "Done", icon: <BsCheck2Circle/>,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+      ],
+    },
+    {
+      icon: <FiUser />,
+      items: [
+        {
+          label: "All projects",
+          icon: <VscBlank/>,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        { label: "Not Started", icon: <BsBattery />, items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        {
+          label: "In progress",
+          icon: <BsBatteryHalf />,
+          items: [
+            {
+              label: "World News",
+            },
+            {
+              label: "Project CRM",
+            },
+            ,
+            {
+              label: "Trading Company",
+            },
+            ,
+            {
+              label: "GMB Vault",
+            },
+          ],
+        },
+        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        { label: "Done", icon: <BsCheck2Circle/>,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+      ],
+    },{
+      icon: <FiSettings />,
+      items: [
+        {
+          label: "All projects",
+          icon: <VscBlank/>,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        { label: "Not Started", icon: <BsBattery />, items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        {
+          label: "In progress",
+          icon: <BsBatteryHalf />,
+          items: [
+            {
+              label: "World News",
+            },
+            {
+              label: "Project CRM",
+            },
+            ,
+            {
+              label: "Trading Company",
+            },
+            ,
+            {
+              label: "GMB Vault",
+            },
+          ],
+        },
+        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        { label: "Done", icon: <BsCheck2Circle/>,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+      ],
+    },{
+      icon: <FiHelpCircle />,
+      items: [
+        {
+          label: "All projects",
+          icon: <VscBlank/>,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        { label: "Not Started", icon: <BsBattery />, items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        {
+          label: "In progress",
+          icon: <BsBatteryHalf />,
+          items: [
+            {
+              label: "World News",
+            },
+            {
+              label: "Project CRM",
+            },
+            ,
+            {
+              label: "Trading Company",
+            },
+            ,
+            {
+              label: "GMB Vault",
+            },
+          ],
+        },
+        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        { label: "Done", icon: <BsCheck2Circle/>,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+      ],
+    }
   ];
 
   const selectedItems =
@@ -165,12 +342,13 @@ export const Sidebar = ({ collapse, setCollapse }) => {
   return (
     <Flex height="100vh">
       {/* Primera lista */}
-      <Stack spacing={4} bg="neutrals.light.100" py={4} justifyContent="center" >
+      <Stack bg="neutrals.light.100" my={0} justifyContent="center" >
         {secondListData.map((data, index) => (
           <IconButton
             key={index}
             size="lg"
             my={0}
+            fontSize="2xl"
             icon={data.icon}
             onClick={() => {
               changeMenu(index);
@@ -239,7 +417,8 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           w="70%"
                   bgColor="brand.primary.default"
                   leftIcon={<AddIcon color="neutrals.light.100" fontSize="0.8rem"/>}
-                  color="neutrals.light.100">Create New Project</Button>
+                  rightIcon={<MdOutlineContentCopy color="neutrals.light.300" fontSize="1.2rem"/>}
+                  color="neutrals.light.100" fontSize="sm">Create New Project</Button>
       </Stack>
     </Flex>
   );
