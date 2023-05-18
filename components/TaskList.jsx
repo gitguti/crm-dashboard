@@ -1,19 +1,15 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
 import { Avatar, AvatarGroup, Box, Checkbox, Flex, IconButton, Text , Heading, Spacer, Divider} from "@chakra-ui/react";
-import { AddIcon, DragHandleIcon } from "@chakra-ui/icons";
+import { AddIcon } from "@chakra-ui/icons";
 import {CiGrid31, CiCircleList} from "react-icons/ci";
 import { BsPlayFill, BsPauseFill, BsThreeDots } from "react-icons/bs";
 import { useState } from "react";
-
-
-
 
 const List = [
     {
         title: "Request server username & password",
         status: "In progress",
         time: "02:54",
-        id: "78",
+        id_number: "78",
         responsibles: [{
             name:"Ryan Florence",
         src:"https://bit.ly/ryan-florence"
@@ -33,7 +29,7 @@ const List = [
         title: "Change color pallete to more bright",
         status: "In progress",
         time: "play",
-        id: "25",
+        id_number: "25",
         responsibles: [{
             name:"Ryan Florence",
         src:"https://bit.ly/ryan-florence"
@@ -52,7 +48,7 @@ const List = [
         title: "Create project page with all tabs",
         status: "In progress",
         time: "pause",
-        id: "33",
+        id_number: "33",
         responsibles: [{
             name:"Ryan Florence",
         src:"https://bit.ly/ryan-florence"

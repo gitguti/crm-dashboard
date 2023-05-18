@@ -52,7 +52,7 @@ export const TimeTrackingResume = ({taskSelect }) => {
             color="neutrals.gray.ash"
             mt={1}
           >
-            Task: # {taskSelect.id}
+            Task: # {taskSelect.id_number}
           </Text>
           <Text
             textAlign="center"

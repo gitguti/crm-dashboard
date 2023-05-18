@@ -33,7 +33,6 @@ import { Sidebar } from "../components/Sidebar";
 import { TaskBadge } from "../components/TaskBadge";
 import { UserBadge } from "../components/UserBadge";
 import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
-import { TimeTrackingResume } from "@/components/TimeTrackingResume";
 import { TaskDescription } from "@/components/TaskDescription";
 import { TaskDescriptionResume } from "@/components/TaskDescriptionResume";
 import { SearchFilter } from "@/components/SearchFilter";
@@ -43,7 +42,6 @@ import {TaskList} from "@/components/TaskList";
 export default function Home() {
   const [collapse, setCollapse] = useState({ index: null, state: false });
   const [taskSelect, setTaskSelect] = useState({})
-  console.log("taskSelect", taskSelect)
   return (
     <>
       <Head>

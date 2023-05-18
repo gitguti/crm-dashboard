@@ -13,18 +13,8 @@ import {
     HStack,
     Center,
   } from "@chakra-ui/react";
-  import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
   import { Search2Icon, LockIcon, HamburgerIcon } from "@chakra-ui/icons";
   import {FaDotCircle} from 'react-icons/fa'
-  import {IoDocumentTextOutline} from "react-icons/hi"
-  import { useState } from "react";
-  import { Sidebar } from "../components/Sidebar";
-  import { TaskBadge } from "../components/TaskBadge";
-  import { UserBadge } from "../components/UserBadge";
-  import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
-  import { TimeTrackingResume } from "@/components/TimeTrackingResume";
-  import { TaskDescription } from "@/components/TaskDescription";
-  import { TaskDescriptionResume } from "@/components/TaskDescriptionResume";
 
 export const SearchFilter = () => {
   return (
