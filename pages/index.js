@@ -22,12 +22,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex h="100vh" flexDirection="row" overflow="hidden" maxWidth="2000px">
+      <Flex h="100vh" flexDirection="row" overflow="hidden">
         <Flex
           as="aside"
           w="full"
           h="full"
-          maxW={collapse.state ? 350 : 12}
+          maxW={collapse.state ? 400 : 12}
           bg="white"
           alignItems="start"
           flexDirection="column"
@@ -47,7 +47,7 @@ export default function Home() {
             position="relative"
           >
             <SearchFilter />
-            <Divider mt={5} />
+            <Divider mt={10} />
             <Flex gap={8}>
               <Stat
                 symbol="h"

@@ -6,6 +6,7 @@ import {
   HStack,
   Button,
   Spacer,
+  Icon,
   Divider,
 } from "@chakra-ui/react";
 import {
@@ -14,6 +15,7 @@ import {
   FiUser,
   FiSettings,
   FiHome,
+  FiDisc,
   FiHelpCircle,
 } from "react-icons/fi";
 import {
@@ -408,7 +410,11 @@ export const Sidebar = ({ collapse, setCollapse }) => {
   return (
     <Flex height="100vh">
       {/* Primera lista */}
-      <Stack bg="neutrals.light.100" my={0} justifyContent="center">
+      <Stack bg="neutrals.light.100" my={0} justifyContent="space-between" h="100%">
+        <Flex>
+        <IconButton bg="transparent" size="lg" icon={<FiDisc fontSize="1.8rem"/>} color="brand.primary.default"/>
+        </Flex>
+        <Flex flexDirection="column">
         {secondListData.map((data, index) => (
           <IconButton
             key={index}
@@ -419,18 +425,18 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             onClick={() => {
               changeMenu(index);
             }}
-            color={
-              collapse.index == index
-                ? "brand.primary.default"
-                : "neutrals.gray.navy"
-            }
-            colorScheme={collapse.index === index ? "" : undefined}
-            borderRadius={collapse.index === index ? "none" : "lg"}
-            bg={collapse.index === index ? "gray.100" : "neutrals.light.100"}
-            _hover={{ bg: "gray.100" }}
-            _active={{ bg: "gray.100" }}
+            color={collapse.index === index ? "brand.primary.default" : "neutrals.gray.navy"}
+              colorScheme={collapse.index === index ? "" : undefined}
+              borderRadius={collapse.index === index ? "none" : "lg"}
+              bg={collapse.index === index ? "gray.100" : "neutrals.light.100"}
+              _hover={{ bg: "gray.100" }}
+              _active={{ bg: "gray.100" }}
           />
         ))}
+        </Flex>
+        <Flex>
+        <Spacer/>
+        </Flex>
       </Stack>
 
       {/* Segunda lista */}
@@ -441,9 +447,11 @@ export const Sidebar = ({ collapse, setCollapse }) => {
         py={4}
         style={!collapse.state ? { display: "none" } : { display: "flex" }}
         justifyContent="space-between"
+        borderColorRight='neutrals.light.800'
+        borderWidth={1}
       >
         {collapse.state && (
-          <Stack pt={2} w="70%">
+          <Stack pt={2} w="100%">
             <HStack >
               <IconButton
                 isRound
@@ -474,7 +482,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
         {<>{/* Empty element */}</>}
         <Button
           aria-label="Pause task"
-          w="70%"
+          w="100%"
           variant="primary"
           leftIcon={<AddIcon color="neutrals.light.100" fontSize="0.8rem" />}
           rightIcon={

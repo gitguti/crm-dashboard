@@ -77,7 +77,7 @@ export const TaskDescriptionResume = () => {
           <Spacer />
         </Flex>
       </Box>
-      <HStack mt={16}>
+      <HStack mt={6}>
         <VStack>
           <Text fontSize="2xs"> Created: 23 July 2020 at 8:23 pm</Text>
           <Text fontSize="2xs">Updated: 24 July 2020 at 6:12 pm</Text>

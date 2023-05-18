@@ -26,9 +26,9 @@ export const Submenu = ({ item, idx }) => {
   }
 
   return (
-    <Stack pt={2} w={350}>
+    <Stack pt={2} w={250}>
       <VStack align="start">
-        <HStack px={6} justifyContent="space-between" w="80%">
+        <HStack px={2} justifyContent="space-between" w="100%">
           <Flex color="neutrals.gray.ash" align="center">
             {typeof item.icon === "string" ? (
               <Icon name={item.icon} />

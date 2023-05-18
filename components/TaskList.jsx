@@ -95,6 +95,61 @@ const List = [
       { name: "Christian Nwamba", src: "https://bit.ly/code-beast" },
     ],
   },
+  {
+    title: "Design system",
+    status: "In progress",
+    time: "play",
+    id_number: "03",
+    responsibles: [
+      {
+        name: "Ryan Florence",
+        src: "https://bit.ly/ryan-florence",
+      },
+      {
+        name: "Prosper Otemuyiwa",
+        src: "https://bit.ly/prosper-baba",
+      },
+      { name: "Christian Nwamba", src: "https://bit.ly/code-beast" },
+    ],
+  },
+  {
+    title: "Make unique page for costumers",
+    status: "In Progress",
+    time: "pause",
+    id_number: "99",
+    responsibles: [
+      {
+        name: "Ryan Florence",
+        src: "https://bit.ly/ryan-florence",
+      },
+      { name: "Christian Nwamba", src: "https://bit.ly/code-beast" },
+      {
+        name: "Kent Dodds",
+        src: "https://bit.ly/kent-c-dodds",
+      },
+      {
+        name: "Prosper Otemuyiwa",
+        src: "https://bit.ly/prosper-baba",
+      },
+    ],
+  },
+  {
+    title: "Make fixes on homepage",
+    status: "In progress",
+    time: "pause",
+    id_number: "27",
+    responsibles: [
+      { name: "Christian Nwamba", src: "https://bit.ly/code-beast" },
+      {
+        name: "Kent Dodds",
+        src: "https://bit.ly/kent-c-dodds",
+      },
+      {
+        name: "Prosper Otemuyiwa",
+        src: "https://bit.ly/prosper-baba",
+      },
+    ],
+  },
 ];
 
 const AvatarList = (user) => {
@@ -148,7 +203,7 @@ const RowList = ({
   return (
     <Box
       p={3}
-      my={2}
+      my={3}
       border="0.5px"
       borderColor="neutrals.gray.light"
       borderRadius="lg"
@@ -268,6 +323,7 @@ export const TaskList = ({ setTaskSelect }) => {
         </Flex>
       </Flex>
       {List.map((element, idx) => (
+        <>
         <RowList
           Element={element}
           setTaskSelect={setTaskSelect}
@@ -277,6 +333,7 @@ export const TaskList = ({ setTaskSelect }) => {
           setIdxSelect={setIdxSelect}
           idxSelect={idxSelect}
         />
+      </>
       ))}
     </>
   );

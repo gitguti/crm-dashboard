@@ -60,7 +60,7 @@ export const SearchFilter = () => {
             leftIcon={<LockIcon color="brand.primary.default" />}
             variant="outline"
             fontWeight="regular"
-            boxShadow="md"
+            boxShadow="lg"
             color="neutrals.gray.navy"
           >
             General
@@ -70,6 +70,7 @@ export const SearchFilter = () => {
             leftIcon={<FaDotCircle />}
             color="neutrals.gray.navy"
             fontWeight="regular"
+            boxShadow="lg"
           >
             Tasks
           </Button>
@@ -77,7 +78,7 @@ export const SearchFilter = () => {
             leftIcon={<LockIcon color="brand.primary.default" />}
             variant="outline"
             fontWeight="regular"
-            boxShadow="md"
+            boxShadow="lg"
             color="neutrals.gray.navy"
           >
             Invoices & Documents
