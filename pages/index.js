@@ -598,11 +598,9 @@ export default function Home() {
               <UserBadge/>
             </Flex>
 
-            <HStack mt={6}>
             <TimeTrackingCollapse/>
           
-            </HStack>
-            <TimeTrackingResume/>
+          
             <HStack mt={8}>
               <Text fontSize="2xl" fontWeight="bold">
                 Task Description
