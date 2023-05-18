@@ -1,11 +1,26 @@
-import { Box, Flex, IconButton, Stack, Text, HStack } from "@chakra-ui/react";
 import {
-  FiChevronDown,
+  Box,
+  Flex,
+  IconButton,
+  Stack,
+  Text,
+  HStack,
+  Button,
+  Spacer,
+  Divider,
+} from "@chakra-ui/react";
+import {
+  FiChevronLeft,
   FiChevronUp,
   FiUser,
   FiSettings,
-  FiMail,
+  FiHome,
+  FiHelpCircle,
 } from "react-icons/fi";
+import { BsBattery, BsBatteryHalf, BsBatteryFull, BsCheck2Circle } from "react-icons/bs";
+import {VscBlank} from "react-icons/vsc"
+import { Submenu } from "./Submenu";
+import { AddIcon } from "@chakra-ui/icons";
 
 export const Sidebar = ({ collapse, setCollapse }) => {
   const changeMenu = (index) => {
@@ -15,80 +30,217 @@ export const Sidebar = ({ collapse, setCollapse }) => {
   };
   const secondListData = [
     {
-      icon: <FiUser />,
+      icon: <FiHome />,
       items: [
-        { label: "Elemento 1-1", value: "valor 1-1" },
-        { label: "Elemento 1-2", value: "valor 1-2" },
-        { label: "Elemento 1-3", value: "valor 1-3" },
+        {
+          label: "All projects",
+          icon: <VscBlank/>,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        { label: "Not Started", icon: <BsBattery />, items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        {
+          label: "In progress",
+          icon: <BsBatteryHalf />,
+          items: [
+            {
+              label: "World News",
+            },
+            {
+              label: "Project CRM",
+            },
+            ,
+            {
+              label: "Trading Company",
+            },
+            ,
+            {
+              label: "GMB Vault",
+            },
+          ],
+        },
+        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
+        { label: "Done", icon: <BsCheck2Circle/>,items: [
+          {
+            label: "Element",
+          },
+          {
+            label: "Element",
+          },
+        ], },
       ],
     },
-    {
-      icon: <FiSettings />,
-      items: [
-        { label: "Elemento 2-1", value: "valor 2-1" },
-        { label: "Elemento 2-2", value: "valor 2-2" },
-      ],
-    },
-    {
-      icon: <FiMail />,
-      items: [{ label: "Elemento 3-1", value: "valor 3-1" }],
-    },
+    // {
+    //   icon: <FiUser />,
+    //   items: [
+    //     {
+    //       label: "In process",
+    //       icon: "valor",
+    //       items: [
+    //         {
+    //           label: "World News",
+    //         },
+    //         {
+    //           label: "Project CRM",
+    //         },
+    //         {
+    //           label: "Trading Company",
+    //         },
+    //         {
+    //           label: "GMB Vault",
+    //         },
+    //       ],
+    //     },
+    //     { label: "Element",  },
+    //     { label: "Element 1-2",  },
+    //     { label: "Element 1-3", },
+    //   ],
+    // },
+    // {
+    //   icon: <FiSettings />,
+    //   items: [
+    //     {
+    //       label: "Element",
+    //       icon: "valor",
+    //       items: [
+    //         {
+    //           label: "Element",
+    //           icon: "valor",
+    //         },
+    //         {
+    //           label: "Element",
+    //           icon: "valor",
+    //         },
+    //       ],
+    //     },
+    //     { label: "Element", icon: "valor" },
+    //     { label: "Element 1-2", icon: "valor 1-2" },
+    //     { label: "Element 1-3", icon: "valor 1-3" },
+    //   ],
+    // },
+    // {
+    //   icon: <FiHelpCircle />,
+    //   items: [
+    //     {
+    //       label: "Element 1-1",
+    //       icon: "valor 1-1",
+    //       items: [
+    //         {
+    //           label: "Element 1-1",
+    //           icon: "valor 1-1",
+    //         },
+    //       ],
+    //     },
+    //     { label: "Element 1-1", icon: "valor 1-1" },
+    //     { label: "Element 1-2", icon: "valor 1-2" },
+    //     { label: "Element 1-3", icon: "valor 1-3" },
+    //   ],
+    // },
   ];
 
   const selectedItems =
-    collapse.index !== null ? secondListData[collapse.index].items : [];
+    collapse.index !== null ? secondListData[collapse.index] : {};
+  console.log(collapse.index);
 
   return (
     <Flex height="100vh">
       {/* Primera lista */}
-      <Stack spacing={4} bg="gray.200" p={4}>
+      <Stack spacing={4} bg="neutrals.light.100" py={4} justifyContent="center" >
         {secondListData.map((data, index) => (
           <IconButton
             key={index}
+            size="lg"
+            my={0}
             icon={data.icon}
             onClick={() => {
               changeMenu(index);
             }}
-            colorScheme={collapse.index === index ? "blue" : undefined}
-            bg={collapse.index === index ? "blue.500" : undefined}
-            _hover={{ bg: "blue.400" }}
-            _active={{ bg: "blue.600" }}
+            color={
+              collapse.index == index
+                ? "brand.primary.default"
+                : "neutrals.gray.navy"
+            }
+            colorScheme={collapse.index === index ? "" : undefined}
+            borderRadius={collapse.index === index ? "none" : "lg"}
+            bg={collapse.index === index ? "gray.100" : "neutrals.light.100"}
+            _hover={{ bg: "gray.100" }}
+            _active={{ bg: "gray.100" }}
           />
         ))}
       </Stack>
 
       {/* Segunda lista */}
-      <Box
+      <Stack
         flex={1}
         bg="gray.100"
+        px={4}
+        py={4} 
         style={!collapse.state ? { display: "none" } : { display: "flex" }}
+        justifyContent="space-between"
       >
-        {/*  <Flex align="center" mb={4}>
-          <IconButton
-            icon={collapsed ? <FiChevronDown /> : <FiChevronUp />}
-            onClick={handleCollapseToggle}
-          /> 
-                    <Text ml={2}>Segunda lista</Text>
-
-        </Flex>*/}
         {collapse.state && (
-          <Stack pt={2}>
+          <Stack pt={2} w="70%">
             <HStack>
               <IconButton
-                icon={collapse.state ? <FiChevronDown /> : <FiChevronUp />}
+                isRound
+                size="sm"
+                color="brand.primary.default"
+                bg="brand.primary.disable"
+                icon={collapse.state ? <FiChevronLeft /> : <FiChevronUp />}
                 // onClick={handleCollapseToggle}
+                // onClick={()=>setSubmenuState(!subMenuState)}
+                onClick={() => changeMenu(collapse.index)}
               />
-              <Text>CRM Project</Text>
-            </HStack>
-            {selectedItems.map((item, idx) => (
-              <Text key={idx} px={4}>
-                {item.label} - {item.value}
+              <Text
+                fontSize="2xl"
+                fontWeight="bold"
+                color="neutrals.gray.navy"
+              >
+                Project CRM
               </Text>
+              <Spacer/>
+              <IconButton
+                isRound
+                color="neutrals.light.100"
+                bg="brand.primary.default"
+                icon={<AddIcon />}
+                size="sm"
+              />
+            </HStack>
+            <Divider />
+
+            {selectedItems?.items?.map((item, idx) => (
+              <Submenu item={item} idx={idx} key={idx} />
             ))}
           </Stack>
-        )}{" "}
+        )}
         {<>{/* Empty element */}</>}
-      </Box>
+        <Button aria-label="Pause task"
+          w="70%"
+                  bgColor="brand.primary.default"
+                  leftIcon={<AddIcon color="neutrals.light.100" fontSize="0.8rem"/>}
+                  color="neutrals.light.100">Create New Project</Button>
+      </Stack>
     </Flex>
   );
 };
