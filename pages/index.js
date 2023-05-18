@@ -36,6 +36,7 @@ import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
 import { TimeTrackingResume } from "@/components/TimeTrackingResume";
 import { TaskDescription } from "@/components/TaskDescription";
 import { TaskDescriptionResume } from "@/components/TaskDescriptionResume";
+import { SearchFilter } from "@/components/SearchFilter";
 
 export default function Home() {
   const [collapse, setCollapse] = useState({ index: null, state: false });
@@ -71,70 +72,7 @@ export default function Home() {
             backgroundColor="neutrals.light.100"
             position="relative"
           >
-            <Grid
-              templateRows="repeat(2, 1fr)"
-              templateColumns="repeat(8, 1fr)"
-              gap={3}
-            >
-              <GridItem colSpan={4}>
-                {" "}
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <Search2Icon color="gray.300" />
-                  </InputLeftElement>
-                  <Input type="search" placeholder="Search oin CRM..." />
-                </InputGroup>
-              </GridItem>
-              <GridItem colStart={7} colEnd={9}>
-                <Flex justifyContent="space-evenly">
-                  <IconButton
-                    aria-label="Search database"
-                    bgColor="brand.primary.default"
-                    icon={<Search2Icon />}
-                    rounded="full"
-                    color="neutrals.light.100"
-                  />
-                  <Badge
-                    px="3"
-                    py="2"
-                    fontSize="1em"
-                    bg="neutrals.light.300"
-                    fontWeight="regular"
-                    borderRadius="md"
-                    alignItems="center"
-                    textAlign="center"
-                  >
-                    01:34
-                  </Badge>
-                </Flex>
-              </GridItem>
-              <GridItem colSpan={8}>
-                <Stack direction="row" spacing={4}>
-                  <Button
-                    leftIcon={<Search2Icon />}
-                    colorScheme="pink"
-                    variant="solid"
-                  >
-                    General
-                  </Button>
-
-                  <Button
-                    leftIcon={<Search2Icon />}
-                    colorScheme="blue"
-                    variant="outline"
-                  >
-                    Tasks
-                  </Button>
-                  <Button
-                    leftIcon={<Search2Icon />}
-                    colorScheme="blue"
-                    variant="outline"
-                  >
-                    Invoices & Documents
-                  </Button>
-                </Stack>
-              </GridItem>
-            </Grid>
+           <SearchFilter/>
             <Divider mt={5} />
             <Flex justifyContent="space-between">
               <Flex
