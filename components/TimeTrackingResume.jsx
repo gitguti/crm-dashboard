@@ -10,19 +10,6 @@ import {
     Center,
     Spacer
   } from "@chakra-ui/react";
-  import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-  import {
-    ArrowForwardIcon,
-    Search2Icon,
-    DragHandleIcon,
-    HamburgerIcon,
-    AddIcon,
-    ExternalLinkIcon,
-    RepeatIcon,
-    EditIcon,
-    ArrowDownIcon,
-    ChevronRightIcon
-  } from "@chakra-ui/icons";
   import {
     MdPause, MdCheck
   } from "react-icons/md";

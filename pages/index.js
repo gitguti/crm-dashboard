@@ -596,8 +596,7 @@ export default function Home() {
               <Center>
               <Divider orientation="vertical" height="20px"/>
               </Center>
-              <UserBadge/>
-            </Flex>
+              <UserBadge username="Kolin F." role="User" showDropdown={true} avatarPosition="right" avatarSize="sm" roleFontWeight="bold" />            </Flex>
 
             <TimeTrackingCollapse/>
           
@@ -615,7 +614,6 @@ export default function Home() {
               /> */}
               <TaskDescription/>
             </HStack>
-            <Divider />
            
             <Box
               bg="neutrals.light.600"

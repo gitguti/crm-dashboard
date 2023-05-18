@@ -1,6 +1,5 @@
 import React from 'react'
 import { IconButton,Divider, Text, Spacer, VStack, HStack } from "@chakra-ui/react";
-import { ChevronRightIcon } from "@chakra-ui/icons";
 import { TaskUsersResume } from "@/components/TaskUsersResume";
 import {
     BsThreeDots
