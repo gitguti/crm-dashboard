@@ -164,7 +164,6 @@ const RowList = ({
   idxSelect,
 }) => {
   const toggleTodo = (todo) => {
-    console.log("todo", todo);
     setTaskSelect(todo);
     if (idxSelect === idx) return setIdxSelect(null);
     setIdxSelect(idx);

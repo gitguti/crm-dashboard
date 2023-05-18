@@ -405,11 +405,10 @@ export const Sidebar = ({ collapse, setCollapse }) => {
 
   const selectedItems =
     collapse.index !== null ? secondListData[collapse.index] : {};
-  console.log(collapse.index);
 
   return (
     <Flex height="100vh">
-      {/* Primera lista */}
+      {/* Principal menu */}
       <Stack
         bg="neutrals.light.100"
         my={0}
@@ -453,7 +452,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
         </Flex>
       </Stack>
 
-      {/* Segunda lista */}
+      {/* Secondar menu */}
       <Stack
         flex={1}
         bg="neutrals.light.700"

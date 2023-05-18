@@ -12,7 +12,6 @@ import {
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 export const Submenu = ({ item, idx }) => {
-  console.log({ item, idx }, "submenu");
   const [collapseToggle, setCollapseToggle] = useState(false);
 
   if (!("items" in item)) {
