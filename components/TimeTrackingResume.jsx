@@ -12,8 +12,13 @@ import {
 } from "@chakra-ui/react";
 import { MdPause, MdCheck } from "react-icons/md";
 
-export const TimeTrackingResume = ({  taskSelect = {} }) => {
-  const { status = "pause", id_number = "41", title = "Docker install", time = "4:23" } = taskSelect;
+export const TimeTrackingResume = ({ taskSelect = {} }) => {
+  const {
+    status = "pause",
+    id_number = "41",
+    title = "Docker install",
+    time = "4:23",
+  } = taskSelect;
   return (
     <>
       <Box

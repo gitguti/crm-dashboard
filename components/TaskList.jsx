@@ -174,7 +174,7 @@ const RowList = ({
       return (
         <IconButton
           aria-label="Play"
-           variant="primary"
+          variant="primary"
           size="sm"
           icon={<BsPlayFill fontSize="1.4rem" />}
           rounded="full"
@@ -185,7 +185,7 @@ const RowList = ({
       return (
         <IconButton
           aria-label="Pause"
-           variant="primary"
+          variant="primary"
           size="sm"
           icon={<BsPauseFill fontSize="1.4rem" />}
           rounded="full"
@@ -240,29 +240,23 @@ const RowList = ({
           </AvatarGroup>
         </Flex>
         <Menu>
-  <MenuButton
-    as={IconButton}
-    aria-label='Options'
-    bgColor="brand.primary.200"
-    size="sm"
-    icon={<BsThreeDots color="brand.primary.hover" fontSize="1.4rem" />}
-    color="brand.primary.default"
-  />
-  <MenuList bg="neutrals.gray.navy" color="neutrals.light.100">
-    <MenuItem bg="neutrals.gray.navy"  >
-      Open
-    </MenuItem>
-    <MenuItem bg="neutrals.gray.navy">
-     Get link
-    </MenuItem>
-    <MenuItem bg="neutrals.gray.navy" >
-      Clone
-    </MenuItem>
-    <MenuItem bg="neutrals.gray.navy" color="semantic.error.reds">
-      Delete
-    </MenuItem>
-  </MenuList>
-</Menu>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            bgColor="brand.primary.200"
+            size="sm"
+            icon={<BsThreeDots color="brand.primary.hover" fontSize="1.4rem" />}
+            color="brand.primary.default"
+          />
+          <MenuList bg="neutrals.gray.navy" color="neutrals.light.100">
+            <MenuItem bg="neutrals.gray.navy">Open</MenuItem>
+            <MenuItem bg="neutrals.gray.navy">Get link</MenuItem>
+            <MenuItem bg="neutrals.gray.navy">Clone</MenuItem>
+            <MenuItem bg="neutrals.gray.navy" color="semantic.error.reds">
+              Delete
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </Flex>
     </Box>
   );
@@ -282,9 +276,10 @@ export const TaskList = ({ setTaskSelect }) => {
             variant="primary"
             icon={<AddIcon />}
             rounded="full"
-            ml={4} mr={6}
+            ml={4}
+            mr={6}
           />
-            <AvatarGroup size="md" max={4}>
+          <AvatarGroup size="md" max={4}>
             <Avatar name="Ryan Florence" src="https://bit.ly/ryan-florence" />
             <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
             <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
@@ -324,16 +319,16 @@ export const TaskList = ({ setTaskSelect }) => {
       </Flex>
       {List.map((element, idx) => (
         <>
-        <RowList
-          Element={element}
-          setTaskSelect={setTaskSelect}
-          key={idx}
-          idx={idx}
-          selected={idxSelect === idx}
-          setIdxSelect={setIdxSelect}
-          idxSelect={idxSelect}
-        />
-      </>
+          <RowList
+            Element={element}
+            setTaskSelect={setTaskSelect}
+            key={idx}
+            idx={idx}
+            selected={idxSelect === idx}
+            setIdxSelect={setIdxSelect}
+            idxSelect={idxSelect}
+          />
+        </>
       ))}
     </>
   );

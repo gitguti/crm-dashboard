@@ -14,7 +14,6 @@ import {
 import { TaskUsersResume } from "@/components/TaskUsersResume";
 import { BsThreeDots } from "react-icons/bs";
 
-
 export const TaskDescription = () => {
   return (
     <>
@@ -25,29 +24,25 @@ export const TaskDescription = () => {
           </Text>
           <Spacer />
           <Menu>
-  <MenuButton
-    as={IconButton}
-    aria-label='Options'
-    bgColor="brand.primary.200"
-    size="sm"
-    icon={<BsThreeDots color="brand.primary.hover" fontSize="1.4rem" />}
-    color="brand.primary.default"
-  />
-  <MenuList bg="neutrals.gray.navy" color="neutrals.light.100">
-  <MenuItem bg="neutrals.gray.navy"  >
-      Open
-    </MenuItem>
-    <MenuItem bg="neutrals.gray.navy">
-     Get link
-    </MenuItem>
-    <MenuItem bg="neutrals.gray.navy" >
-      Clone
-    </MenuItem>
-    <MenuItem bg="neutrals.gray.navy" color="semantic.error.reds">
-      Delete
-    </MenuItem>
-  </MenuList>
-</Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              bgColor="brand.primary.200"
+              size="sm"
+              icon={
+                <BsThreeDots color="brand.primary.hover" fontSize="1.4rem" />
+              }
+              color="brand.primary.default"
+            />
+            <MenuList bg="neutrals.gray.navy" color="neutrals.light.100">
+              <MenuItem bg="neutrals.gray.navy">Open</MenuItem>
+              <MenuItem bg="neutrals.gray.navy">Get link</MenuItem>
+              <MenuItem bg="neutrals.gray.navy">Clone</MenuItem>
+              <MenuItem bg="neutrals.gray.navy" color="semantic.error.reds">
+                Delete
+              </MenuItem>
+            </MenuList>
+          </Menu>
         </HStack>
         <Divider />
         <TaskUsersResume />
