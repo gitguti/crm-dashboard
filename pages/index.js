@@ -37,6 +37,7 @@ import { TimeTrackingResume } from "@/components/TimeTrackingResume";
 import { TaskDescription } from "@/components/TaskDescription";
 import { TaskDescriptionResume } from "@/components/TaskDescriptionResume";
 import { SearchFilter } from "@/components/SearchFilter";
+import {Stat} from "@/components/Stat";
 
 export default function Home() {
   const [collapse, setCollapse] = useState({ index: null, state: false });
@@ -74,159 +75,12 @@ export default function Home() {
           >
            <SearchFilter/>
             <Divider mt={5} />
-            <Flex justifyContent="space-between">
-              <Flex
-                flexDir="column"
-                bg="neutrals.light.200"
-                px={4}
-                py={2}
-                borderRadius="lg"
-                w="30%"
-                mt={4}
-              >
-                <Flex justify="flex-end">
-                  <Badge
-                    bgColor="brand.secondary.default"
-                    w={4}
-                    borderRadius="md"
-                  >
-                    <Text
-                      fontSize="0.7rem"
-                      color="neutrals.light.100"
-                      fontWeight="bold"
-                      textTransform="none"
-                      textAlign="center"
-                    >
-                      h
-                    </Text>
-                  </Badge>
-                </Flex>
-                <Text
-                  color="neutrals.gray.steel"
-                  fontWeight="regular"
-                  fontSize="0.9rem"
-                >
-                  Yours & total time
-                </Text>
-                <Stack direction="row" alignItems="baseline">
-                  <Text
-                    fontWeight="regular"
-                    color="neutrals.gray.steel"
-                    fontSize="1.2rem"
-                  >
-                    03:09
-                  </Text>
-                  <Text
-                    fontWeight="regular"
-                    color="neutrals.gray.ash"
-                    fontSize="0.7rem"
-                  >
-                    (05:21)
-                  </Text>
-                </Stack>
-              </Flex>
+            <Flex gap={8}>
+             
+            <Stat symbol="h" concept="Yours & total time" number="03:09" detail="(05:21)" badgeColor="brand.secondary.default"/>
+            <Stat symbol="$" concept="Yours & total earnings" number="1,695.00" detail="(4,695.00)" badgeColor="semantic.success.green" />
+            <Stat symbol="%" concept="Project progress" number="34%" detail="(34/100)" badgeColor="brand.primary.default"/>
 
-              <Flex
-                flexDir="column"
-                bg="neutrals.light.200"
-                px={4}
-                py={2}
-                borderRadius="lg"
-                w="30%"
-                mt={4}
-              >
-                <Flex justify="flex-end">
-                  <Badge
-                    bgColor="semantic.success.green"
-                    w={4}
-                    borderRadius="md"
-                  >
-                    <Text
-                      fontSize="0.7rem"
-                      color="neutrals.light.100"
-                      fontWeight="bold"
-                      textTransform="none"
-                      textAlign="center"
-                    >
-                      $
-                    </Text>
-                  </Badge>
-                </Flex>
-                <Text
-                  color="neutrals.gray.steel"
-                  fontWeight="regular"
-                  fontSize="0.9rem"
-                >
-                  Yours & total earnings
-                </Text>
-                <Stack direction="row" alignItems="baseline">
-                  <Text
-                    fontWeight="regular"
-                    color="neutrals.gray.steel"
-                    fontSize="1.2rem"
-                  >
-                    1695.00
-                  </Text>
-                  <Text
-                    fontWeight="regular"
-                    color="neutrals.gray.ash"
-                    fontSize="0.7rem"
-                  >
-                    (4,695.00)
-                  </Text>
-                </Stack>
-              </Flex>
-
-              <Flex
-                flexDir="column"
-                bg="neutrals.light.200"
-                px={4}
-                py={2}
-                borderRadius="lg"
-                w="30%"
-                mt={4}
-              >
-                <Flex justify="flex-end">
-                  <Badge
-                    bgColor="brand.primary.default"
-                    w={4}
-                    borderRadius="md"
-                  >
-                    <Text
-                      fontSize="0.7rem"
-                      color="neutrals.light.100"
-                      fontWeight="bold"
-                      textTransform="none"
-                      textAlign="center"
-                    >
-                      %
-                    </Text>
-                  </Badge>
-                </Flex>
-                <Text
-                  color="neutrals.gray.steel"
-                  fontWeight="regular"
-                  fontSize="0.9rem"
-                >
-                  Project progress
-                </Text>
-                <Stack direction="row" alignItems="baseline">
-                  <Text
-                    fontWeight="regular"
-                    color="neutrals.gray.steel"
-                    fontSize="1.2rem"
-                  >
-                    34%
-                  </Text>
-                  <Text
-                    fontWeight="regular"
-                    color="neutrals.gray.ash"
-                    fontSize="0.7rem"
-                  >
-                    (34/100)
-                  </Text>
-                </Stack>
-              </Flex>
             </Flex>
             <Flex justifyContent="space-between" mt={12} alignItems="center">
               <Heading as="h3" fontWeight="light">
