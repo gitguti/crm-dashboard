@@ -1,33 +1,5 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import {
-  Button,
-  Heading,
-  Flex,
-  Text,
-  Grid,
-  GridItem,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  IconButton,
-  Badge,
-  Stack,
-  Divider,
-  Avatar,
-  AvatarBadge,
-  AvatarGroup,
-  Box,
-  Checkbox,
-  VStack,
-  HStack,
-  Image,
-  Spacer,
-  Center,
-} from "@chakra-ui/react";
-import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-import { Search2Icon, DragHandleIcon, HamburgerIcon, AddIcon } from "@chakra-ui/icons";
+import { Flex, Divider, HStack, Center } from "@chakra-ui/react";
 import { useState } from "react";
 import { Sidebar } from "../components/Sidebar";
 import { TaskBadge } from "../components/TaskBadge";
@@ -36,12 +8,12 @@ import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
 import { TaskDescription } from "@/components/TaskDescription";
 import { TaskDescriptionResume } from "@/components/TaskDescriptionResume";
 import { SearchFilter } from "@/components/SearchFilter";
-import {Stat} from "@/components/Stat";
-import {TaskList} from "@/components/TaskList";
+import { Stat } from "@/components/Stat";
+import { TaskList } from "@/components/TaskList";
 
 export default function Home() {
   const [collapse, setCollapse] = useState({ index: null, state: false });
-  const [taskSelect, setTaskSelect] = useState({})
+  const [taskSelect, setTaskSelect] = useState({});
   return (
     <>
       <Head>
@@ -74,14 +46,32 @@ export default function Home() {
             backgroundColor="neutrals.light.100"
             position="relative"
           >
-           <SearchFilter/>
+            <SearchFilter />
             <Divider mt={5} />
             <Flex gap={8}>
-            <Stat symbol="h" concept="Yours & total time" number="03:09" detail="(05:21)" badgeColor="brand.secondary.default"/>
-            <Stat symbol="$" concept="Yours & total earnings" number="1,695.00" detail="(4,695.00)" badgeColor="semantic.success.green" />
-            <Stat symbol="%" concept="Project progress" number="34%" detail="(34/100)" badgeColor="brand.primary.default"/>
+              <Stat
+                symbol="h"
+                concept="Yours & total time"
+                number="03:09"
+                detail="(05:21)"
+                badgeColor="brand.secondary.default"
+              />
+              <Stat
+                symbol="$"
+                concept="Yours & total earnings"
+                number="1,695.00"
+                detail="(4,695.00)"
+                badgeColor="semantic.success.green"
+              />
+              <Stat
+                symbol="%"
+                concept="Project progress"
+                number="34%"
+                detail="(34/100)"
+                badgeColor="brand.primary.default"
+              />
             </Flex>
-            <TaskList setTaskSelect={setTaskSelect}/>
+            <TaskList setTaskSelect={setTaskSelect} />
           </Flex>
           <Flex
             w="20%"

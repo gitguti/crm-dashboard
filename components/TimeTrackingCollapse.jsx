@@ -3,7 +3,7 @@ import { Button, Text, Spacer, VStack, HStack } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { TimeTrackingResume } from "@/components/TimeTrackingResume";
 
-export const TimeTrackingCollapse = ({taskSelect}) => {
+export const TimeTrackingCollapse = ({ taskSelect }) => {
   return (
     <>
       <VStack mt={6} align="start">

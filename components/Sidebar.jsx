@@ -1,5 +1,4 @@
 import {
-  Box,
   Flex,
   IconButton,
   Stack,
@@ -17,9 +16,14 @@ import {
   FiHome,
   FiHelpCircle,
 } from "react-icons/fi";
-import { BsBattery, BsBatteryHalf, BsBatteryFull, BsCheck2Circle } from "react-icons/bs";
-import {VscBlank} from "react-icons/vsc"
-import {MdOutlineContentCopy} from "react-icons/md"
+import {
+  BsBattery,
+  BsBatteryHalf,
+  BsBatteryFull,
+  BsCheck2Circle,
+} from "react-icons/bs";
+import { VscBlank } from "react-icons/vsc";
+import { MdOutlineContentCopy } from "react-icons/md";
 import { Submenu } from "./Submenu";
 import { AddIcon } from "@chakra-ui/icons";
 
@@ -35,7 +39,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       items: [
         {
           label: "All projects",
-          icon: <VscBlank/>,
+          icon: <VscBlank />,
           items: [
             {
               label: "Element",
@@ -45,14 +49,18 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Not Started", icon: <BsBattery />, items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Not Started",
+          icon: <BsBattery />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
         {
           label: "In progress",
           icon: <BsBatteryHalf />,
@@ -73,22 +81,30 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
-        { label: "Done", icon: <BsCheck2Circle/>,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Nearing deadline",
+          icon: <BsBatteryFull />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        {
+          label: "Done",
+          icon: <BsCheck2Circle />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
       ],
     },
     {
@@ -96,7 +112,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       items: [
         {
           label: "All projects",
-          icon: <VscBlank/>,
+          icon: <VscBlank />,
           items: [
             {
               label: "Element",
@@ -106,14 +122,18 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Not Started", icon: <BsBattery />, items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Not Started",
+          icon: <BsBattery />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
         {
           label: "In progress",
           icon: <BsBatteryHalf />,
@@ -134,22 +154,30 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
-        { label: "Done", icon: <BsCheck2Circle/>,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Nearing deadline",
+          icon: <BsBatteryFull />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        {
+          label: "Done",
+          icon: <BsCheck2Circle />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
       ],
     },
     {
@@ -157,7 +185,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       items: [
         {
           label: "All projects",
-          icon: <VscBlank/>,
+          icon: <VscBlank />,
           items: [
             {
               label: "Element",
@@ -167,14 +195,18 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Not Started", icon: <BsBattery />, items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Not Started",
+          icon: <BsBattery />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
         {
           label: "In progress",
           icon: <BsBatteryHalf />,
@@ -195,29 +227,38 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
-        { label: "Done", icon: <BsCheck2Circle/>,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Nearing deadline",
+          icon: <BsBatteryFull />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        {
+          label: "Done",
+          icon: <BsCheck2Circle />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
       ],
-    },{
+    },
+    {
       icon: <FiSettings />,
       items: [
         {
           label: "All projects",
-          icon: <VscBlank/>,
+          icon: <VscBlank />,
           items: [
             {
               label: "Element",
@@ -227,14 +268,18 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Not Started", icon: <BsBattery />, items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Not Started",
+          icon: <BsBattery />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
         {
           label: "In progress",
           icon: <BsBatteryHalf />,
@@ -255,29 +300,38 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
-        { label: "Done", icon: <BsCheck2Circle/>,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Nearing deadline",
+          icon: <BsBatteryFull />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        {
+          label: "Done",
+          icon: <BsCheck2Circle />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
       ],
-    },{
+    },
+    {
       icon: <FiHelpCircle />,
       items: [
         {
           label: "All projects",
-          icon: <VscBlank/>,
+          icon: <VscBlank />,
           items: [
             {
               label: "Element",
@@ -287,14 +341,18 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Not Started", icon: <BsBattery />, items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Not Started",
+          icon: <BsBattery />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
         {
           label: "In progress",
           icon: <BsBatteryHalf />,
@@ -315,24 +373,32 @@ export const Sidebar = ({ collapse, setCollapse }) => {
             },
           ],
         },
-        { label: "Nearing deadline", icon: <BsBatteryFull />,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
-        { label: "Done", icon: <BsCheck2Circle/>,items: [
-          {
-            label: "Element",
-          },
-          {
-            label: "Element",
-          },
-        ], },
+        {
+          label: "Nearing deadline",
+          icon: <BsBatteryFull />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
+        {
+          label: "Done",
+          icon: <BsCheck2Circle />,
+          items: [
+            {
+              label: "Element",
+            },
+            {
+              label: "Element",
+            },
+          ],
+        },
       ],
-    }
+    },
   ];
 
   const selectedItems =
@@ -342,7 +408,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
   return (
     <Flex height="100vh">
       {/* Primera lista */}
-      <Stack bg="neutrals.light.100" my={0} justifyContent="center" >
+      <Stack bg="neutrals.light.100" my={0} justifyContent="center">
         {secondListData.map((data, index) => (
           <IconButton
             key={index}
@@ -372,7 +438,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
         flex={1}
         bg="gray.100"
         px={4}
-        py={4} 
+        py={4}
         style={!collapse.state ? { display: "none" } : { display: "flex" }}
         justifyContent="space-between"
       >
@@ -385,18 +451,12 @@ export const Sidebar = ({ collapse, setCollapse }) => {
                 color="brand.primary.default"
                 bg="brand.primary.disable"
                 icon={collapse.state ? <FiChevronLeft /> : <FiChevronUp />}
-                // onClick={handleCollapseToggle}
-                // onClick={()=>setSubmenuState(!subMenuState)}
                 onClick={() => changeMenu(collapse.index)}
               />
-              <Text
-                fontSize="2xl"
-                fontWeight="bold"
-                color="neutrals.gray.navy"
-              >
+              <Text fontSize="2xl" fontWeight="bold" color="neutrals.gray.navy">
                 Project CRM
               </Text>
-              <Spacer/>
+              <Spacer />
               <IconButton
                 isRound
                 color="neutrals.light.100"
@@ -413,12 +473,22 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           </Stack>
         )}
         {<>{/* Empty element */}</>}
-        <Button aria-label="Pause task"
+        <Button
+          aria-label="Pause task"
           w="70%"
-                  bgColor="brand.primary.default"
-                  leftIcon={<AddIcon color="neutrals.light.100" fontSize="0.8rem"/>}
-                  rightIcon={<MdOutlineContentCopy color="neutrals.light.300" fontSize="1.2rem"/>}
-                  color="neutrals.light.100" fontSize="sm">Create New Project</Button>
+          bgColor="brand.primary.default"
+          leftIcon={<AddIcon color="neutrals.light.100" fontSize="0.8rem" />}
+          rightIcon={
+            <MdOutlineContentCopy
+              color="neutrals.light.300"
+              fontSize="1.2rem"
+            />
+          }
+          color="neutrals.light.100"
+          fontSize="sm"
+        >
+          Create New Project
+        </Button>
       </Stack>
     </Flex>
   );

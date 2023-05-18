@@ -12,8 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { MdPause, MdCheck } from "react-icons/md";
 
-export const TimeTrackingResume = ({taskSelect }) => {
-  console.log(taskSelect, "Hola")
+export const TimeTrackingResume = ({ taskSelect }) => {
+  console.log(taskSelect, "Hola");
   return (
     <>
       <Box
@@ -61,10 +61,10 @@ export const TimeTrackingResume = ({taskSelect }) => {
             fontSize="lg"
             mt={2}
           >
-          {taskSelect.title}
+            {taskSelect.title}
           </Text>
           <Text fontWeight="light" textAlign="center" fontSize="4xl" my={4}>
-          {taskSelect.time}
+            {taskSelect.time}
           </Text>
         </Flex>
         <Center>

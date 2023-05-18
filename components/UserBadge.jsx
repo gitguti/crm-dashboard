@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Flex,
-  Text,
-  Avatar,
-  VStack,
-  Spacer,
-  IconButton,
-} from "@chakra-ui/react";
+import { Flex, Text, Avatar, VStack, IconButton } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export const UserBadge = ({
