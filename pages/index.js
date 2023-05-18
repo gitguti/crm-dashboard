@@ -54,6 +54,7 @@ import {UserBadge} from "../components/UserBadge";
 import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
 import { TimeTrackingResume } from "@/components/TimeTrackingResume";
 import { TaskDescription } from "@/components/TaskDescription";
+import {TaskDescriptionResume} from "@/components/TaskDescriptionResume"
 
 
 const { definePartsStyle, defineMultiStyleConfig } =
@@ -615,54 +616,7 @@ export default function Home() {
               <TaskDescription/>
             </HStack>
            
-            <Box
-              bg="neutrals.light.600"
-              w="100%"
-              px={5}
-              py={6}
-              display="flex"
-              flexDirection="column"
-              borderRadius="lg"
-              mt={4}
-            >
-              <Flex justifyContent="space-between" alignItems="center">
-                <Button
-                  bg="brand.primary.default"
-                  fontWeight="bold"
-                  color="neutrals.light.100"
-                  rightIcon={<Search2Icon />}
-                >
-                  In progress
-                </Button>
-                <Text>Normal Priority</Text>
-              </Flex>
-              <Text fontSize="md" mt={4}>
-                Create project page with bootstrap 12 grid, you can use figma
-                our project.
-              </Text>
-              <Box w="100%">
-                <Image
-                  src="https://bit.ly/dan-abramov"
-                  alt="Dan Abramov"
-                  objectFit="cover"
-                  borderRadius="xl"
-                />
-              </Box>
-              <Flex mt={4}>
-                <Button
-                  color="brand.primary.default"
-                  leftIcon={<Search2Icon />}
-                  size="sm"
-                  variant="outline"
-                  borderRadius="lg"
-                  py={2}
-                  borderColor="brand.primary.default"
-                >
-                  Attach file
-                </Button>
-                <Spacer />
-              </Flex>
-            </Box>
+           <TaskDescriptionResume/>
             <HStack mt={4}>
               <VStack>
                 <Text fontSize="xs"> Created: 23 July 2020 at 8:23 pm</Text>
