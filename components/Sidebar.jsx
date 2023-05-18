@@ -50,7 +50,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Not Started",
+          label: "Not Started 2",
           icon: <BsBattery />,
           items: [
             {
@@ -62,7 +62,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "In progress",
+          label: "In progress 2",
           icon: <BsBatteryHalf />,
           items: [
             {
@@ -82,7 +82,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Nearing deadline",
+          label: "Nearing deadline 2",
           icon: <BsBatteryFull />,
           items: [
             {
@@ -94,7 +94,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Done",
+          label: "Done 2",
           icon: <BsCheck2Circle />,
           items: [
             {
@@ -123,7 +123,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Not Started",
+          label: "Not Started 3",
           icon: <BsBattery />,
           items: [
             {
@@ -135,7 +135,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "In progress",
+          label: "In progress 3",
           icon: <BsBatteryHalf />,
           items: [
             {
@@ -155,7 +155,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Nearing deadline",
+          label: "Nearing deadline 3",
           icon: <BsBatteryFull />,
           items: [
             {
@@ -167,7 +167,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Done",
+          label: "Done 3",
           icon: <BsCheck2Circle />,
           items: [
             {
@@ -196,7 +196,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Not Started",
+          label: "Not Started 4",
           icon: <BsBattery />,
           items: [
             {
@@ -208,7 +208,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "In progress",
+          label: "In progress 4",
           icon: <BsBatteryHalf />,
           items: [
             {
@@ -228,7 +228,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Nearing deadline",
+          label: "Nearing deadline 4",
           icon: <BsBatteryFull />,
           items: [
             {
@@ -240,7 +240,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Done",
+          label: "Done 4",
           icon: <BsCheck2Circle />,
           items: [
             {
@@ -269,7 +269,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Not Started",
+          label: "Not Started 5",
           icon: <BsBattery />,
           items: [
             {
@@ -281,7 +281,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "In progress",
+          label: "In progress 5",
           icon: <BsBatteryHalf />,
           items: [
             {
@@ -301,7 +301,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Nearing deadline",
+          label: "Nearing deadline 5",
           icon: <BsBatteryFull />,
           items: [
             {
@@ -313,7 +313,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Done",
+          label: "Done 5",
           icon: <BsCheck2Circle />,
           items: [
             {
@@ -342,7 +342,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Not Started",
+          label: "Not Started 6",
           icon: <BsBattery />,
           items: [
             {
@@ -354,7 +354,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "In progress",
+          label: "In progress 6",
           icon: <BsBatteryHalf />,
           items: [
             {
@@ -374,7 +374,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Nearing deadline",
+          label: "Nearing deadline 7",
           icon: <BsBatteryFull />,
           items: [
             {
@@ -386,7 +386,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
           ],
         },
         {
-          label: "Done",
+          label: "Done 8",
           icon: <BsCheck2Circle />,
           items: [
             {
@@ -459,8 +459,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
               <Spacer />
               <IconButton
                 isRound
-                color="neutrals.light.100"
-                bg="brand.primary.default"
+                variant="primary"
                 icon={<AddIcon />}
                 size="sm"
               />
@@ -476,7 +475,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
         <Button
           aria-label="Pause task"
           w="70%"
-          bgColor="brand.primary.default"
+          variant="primary"
           leftIcon={<AddIcon color="neutrals.light.100" fontSize="0.8rem" />}
           rightIcon={
             <MdOutlineContentCopy

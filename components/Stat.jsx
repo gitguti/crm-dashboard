@@ -8,7 +8,7 @@ export const Stat = ({ symbol, concept, number, detail, badgeColor }) => {
         flexDir="column"
         bg="neutrals.light.200"
         px={4}
-        py={2}
+        py={4}
         borderRadius="lg"
         w="30%"
         mt={4}

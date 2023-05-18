@@ -35,10 +35,9 @@ export const SearchFilter = () => {
         <HStack>
           <IconButton
             aria-label="Search database"
-            bgColor="brand.primary.default"
             icon={<Search2Icon />}
             rounded="full"
-            color="neutrals.light.100"
+            variant="primary"
           />
           <Spacer />
           <Badge

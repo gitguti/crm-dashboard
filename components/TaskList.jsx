@@ -9,6 +9,10 @@ import {
   Heading,
   Spacer,
   Divider,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 import { CiGrid31, CiCircleList } from "react-icons/ci";
@@ -115,7 +119,7 @@ const RowList = ({
       return (
         <IconButton
           aria-label="Play"
-          bgColor="brand.primary.default"
+           variant="primary"
           size="sm"
           icon={<BsPlayFill fontSize="1.4rem" />}
           rounded="full"
@@ -126,7 +130,7 @@ const RowList = ({
       return (
         <IconButton
           aria-label="Pause"
-          bgColor="brand.primary.default"
+           variant="primary"
           size="sm"
           icon={<BsPauseFill fontSize="1.4rem" />}
           rounded="full"
@@ -180,13 +184,30 @@ const RowList = ({
             {Element.responsibles.map(AvatarList)}
           </AvatarGroup>
         </Flex>
-        <IconButton
-          aria-label="Search database"
-          bgColor="blue.100"
-          size="sm"
-          icon={<BsThreeDots color="brand.primary.hover" fontSize="1.4rem" />}
-          color="brand.primary.default"
-        />
+        <Menu>
+  <MenuButton
+    as={IconButton}
+    aria-label='Options'
+    bgColor="brand.primary.200"
+    size="sm"
+    icon={<BsThreeDots color="brand.primary.hover" fontSize="1.4rem" />}
+    color="brand.primary.default"
+  />
+  <MenuList bg="neutrals.gray.navy" color="neutrals.light.100">
+    <MenuItem bg="neutrals.gray.navy"  >
+      Open
+    </MenuItem>
+    <MenuItem bg="neutrals.gray.navy">
+     Get link
+    </MenuItem>
+    <MenuItem bg="neutrals.gray.navy" >
+      Clone
+    </MenuItem>
+    <MenuItem bg="neutrals.gray.navy" color="semantic.error.reds">
+      Delete
+    </MenuItem>
+  </MenuList>
+</Menu>
       </Flex>
     </Box>
   );
@@ -203,15 +224,12 @@ export const TaskList = ({ setTaskSelect }) => {
           </Heading>
           <IconButton
             aria-label="Search database"
-            bgColor="brand.primary.default"
+            variant="primary"
             icon={<AddIcon />}
             rounded="full"
-            color="neutrals.light.100"
-            ml={6}
+            ml={4} mr={6}
           />
-        </Flex>
-        <Flex w="40%" justifyContent="end" alignItems="center">
-          <AvatarGroup size="md" max={2}>
+            <AvatarGroup size="md" max={4}>
             <Avatar name="Ryan Florence" src="https://bit.ly/ryan-florence" />
             <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
             <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
@@ -220,7 +238,10 @@ export const TaskList = ({ setTaskSelect }) => {
               src="https://bit.ly/prosper-baba"
             />
             <Avatar name="Christian Nwamba" src="https://bit.ly/code-beast" />
+            <Avatar name="Christian Nwamba" src="https://bit.ly/code-beast" />
           </AvatarGroup>
+        </Flex>
+        <Flex w="40%" justifyContent="end" alignItems="center">
           <Spacer />
           <Text
             fontWeight="regular"

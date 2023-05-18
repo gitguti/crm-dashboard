@@ -16,7 +16,7 @@ export const TaskBadge = () => {
       <Flex alignItems="center">
         <Avatar
           aria-label="Search database"
-          bgColor="semantic.success.green"
+          bgColor="semantic.success.600"
           icon={<MdCheck fontSize="1.25rem" />}
           rounded="full"
           color="neutrals.light.100"

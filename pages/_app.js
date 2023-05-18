@@ -9,8 +9,9 @@ const theme = extendTheme({
     brand: {
       primary: {
         default: "#125EF8",
-        hover: "#3979F9",
+        hover: "#074DDA",
         disabled: "#6194FA",
+        200: "#E3EDFD"
       },
       secondary: {
         default: "#FF9E01",
@@ -38,7 +39,9 @@ const theme = extendTheme({
         red: "#F15151",
       },
       success: {
-        green: "#00BC8B",
+        200: "#00F5B4",
+        600: "#00BC8B",
+        800: "#00A378", 
       },
     },
   },
@@ -47,16 +50,28 @@ const theme = extendTheme({
       variants: {
         primary: {
           bg: "brand.primary.default",
-          _hover: { bg: "brand.primary.hover" },
+          _hover: { bg: "brand.primary.hover",
+          shadow: 'md',
+          transitionDuration: '0.2s',
+          color: "neutrals.light.100",
+          transitionTimingFunction: "ease-in-out",
+          transform: 'scale(1.1)', },
           _disabled: { bg: "brand.primary.disabled" },
-          color: "white",
+          color: "neutrals.light.200",
         },
         secondary: {
-          bg: "gray.400",
-          color: "white",
-          _hover: { bg: "gray.500" },
-          _disabled: { bg: "gray.200", color: "gray.500" },
-        },
+          bg: "semantic.success.600",
+          _hover: {
+          bg: "semantic.success.800",
+          shadow: 'md',
+          transitionDuration: '0.2s',
+          color: "neutrals.light.100",
+          transitionTimingFunction: "ease-in-out",
+          transform: 'scale(1.1)'
+          },
+          _disabled: { bg: "semantic.success.200" },
+          color: "neutrals.light.200",
+          }
       },
     },
     Checkbox: checkboxTheme,

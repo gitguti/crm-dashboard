@@ -27,7 +27,7 @@ export default function Home() {
           as="aside"
           w="full"
           h="full"
-          maxW={collapse.state ? 350 : 100}
+          maxW={collapse.state ? 350 : 12}
           bg="white"
           alignItems="start"
           flexDirection="column"
@@ -38,7 +38,7 @@ export default function Home() {
         <Flex as="main" w="full" h="full" bg="white">
           {/* Starts second column */}
           <Flex
-            w="80%"
+            w="75%"
             p="2%"
             flexDirection="column"
             overflow="auto"
@@ -61,7 +61,7 @@ export default function Home() {
                 concept="Yours & total earnings"
                 number="1,695.00"
                 detail="(4,695.00)"
-                badgeColor="semantic.success.green"
+                badgeColor="semantic.success.600"
               />
               <Stat
                 symbol="%"
@@ -74,7 +74,7 @@ export default function Home() {
             <TaskList setTaskSelect={setTaskSelect} />
           </Flex>
           <Flex
-            w="20%"
+            w="25%"
             p="1%"
             flexDirection="column"
             overflow="auto"

@@ -12,8 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { MdPause, MdCheck } from "react-icons/md";
 
-export const TimeTrackingResume = ({ taskSelect }) => {
-  console.log(taskSelect, "Hola");
+export const TimeTrackingResume = ({  taskSelect = {} }) => {
+  const { status = "pause", id_number = "41", title = "Docker install", time = "4:23" } = taskSelect;
   return (
     <>
       <Box
@@ -40,7 +40,7 @@ export const TimeTrackingResume = ({ taskSelect }) => {
               textAlign="center"
               textTransform="uppercase"
             >
-              {taskSelect.status}
+              {status}
             </Text>
           </Badge>
         </Flex>
@@ -52,7 +52,7 @@ export const TimeTrackingResume = ({ taskSelect }) => {
             color="neutrals.gray.ash"
             mt={1}
           >
-            Task: # {taskSelect.id_number}
+            Task: # {id_number}
           </Text>
           <Text
             textAlign="center"
@@ -61,10 +61,10 @@ export const TimeTrackingResume = ({ taskSelect }) => {
             fontSize="lg"
             mt={2}
           >
-            {taskSelect.title}
+            {title}
           </Text>
           <Text fontWeight="light" textAlign="center" fontSize="4xl" my={4}>
-            {taskSelect.time}
+            {time}
           </Text>
         </Flex>
         <Center>
@@ -109,7 +109,7 @@ export const TimeTrackingResume = ({ taskSelect }) => {
                 <Spacer />
                 <IconButton
                   aria-label="Complete task"
-                  bgColor="semantic.success.green"
+                  variant="secondary"
                   icon={<MdCheck />}
                   rounded="full"
                   color="neutrals.light.100"

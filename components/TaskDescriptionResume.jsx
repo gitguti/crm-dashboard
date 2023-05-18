@@ -23,14 +23,13 @@ export const TaskDescriptionResume = () => {
         display="flex"
         flexDirection="column"
         borderRadius="lg"
-        mt={4}
+        mt={6}
       >
         <Flex justifyContent="space-between" alignItems="center">
           <Button
             size="sm"
-            bg="brand.primary.default"
+            variant="primary"
             fontWeight="bold"
-            color="neutrals.light.100"
             rightIcon={<FiChevronDown />}
           >
             In progress
@@ -69,7 +68,7 @@ export const TaskDescriptionResume = () => {
             color="brand.primary.default"
             leftIcon={<AttachmentIcon fontSize="md" />}
             size="sm"
-            bgColor="blue.100"
+            bgColor="brand.primary.200"
             borderRadius="lg"
             fontWeight="bold"
           >
@@ -78,7 +77,7 @@ export const TaskDescriptionResume = () => {
           <Spacer />
         </Flex>
       </Box>
-      <HStack mt={4}>
+      <HStack mt={16}>
         <VStack>
           <Text fontSize="2xs"> Created: 23 July 2020 at 8:23 pm</Text>
           <Text fontSize="2xs">Updated: 24 July 2020 at 6:12 pm</Text>
