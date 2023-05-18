@@ -38,7 +38,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       icon: <FiHome />,
       items: [
         {
-          label: "All projects",
+          label: "All projects 2",
           icon: <VscBlank />,
           items: [
             {
@@ -111,7 +111,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       icon: <MdOutlineContentCopy />,
       items: [
         {
-          label: "All projects",
+          label: "All projects 3",
           icon: <VscBlank />,
           items: [
             {
@@ -184,7 +184,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       icon: <FiUser />,
       items: [
         {
-          label: "All projects",
+          label: "All projects 4",
           icon: <VscBlank />,
           items: [
             {
@@ -257,7 +257,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       icon: <FiSettings />,
       items: [
         {
-          label: "All projects",
+          label: "All projects 5",
           icon: <VscBlank />,
           items: [
             {
@@ -330,7 +330,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       icon: <FiHelpCircle />,
       items: [
         {
-          label: "All projects",
+          label: "All projects 6",
           icon: <VscBlank />,
           items: [
             {
@@ -436,7 +436,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       {/* Segunda lista */}
       <Stack
         flex={1}
-        bg="gray.100"
+        bg="neutrals.light.700"
         px={4}
         py={4}
         style={!collapse.state ? { display: "none" } : { display: "flex" }}
@@ -444,7 +444,7 @@ export const Sidebar = ({ collapse, setCollapse }) => {
       >
         {collapse.state && (
           <Stack pt={2} w="70%">
-            <HStack>
+            <HStack >
               <IconButton
                 isRound
                 size="sm"

@@ -30,6 +30,7 @@ const theme = extendTheme({
         400: "#EEF4FE",
         500: "#F0F5FE",
         600: "#F2F6FD",
+        700: "#F1F6FF"
       },
     },
     semantic: {
