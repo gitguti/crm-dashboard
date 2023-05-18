@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Box, Flex, IconButton, Stack, Text, HStack } from "@chakra-ui/react";
 import {
   FiChevronDown,

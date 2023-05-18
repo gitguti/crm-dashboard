@@ -1,15 +1,28 @@
-import React from 'react';
-import { Flex, Text, Avatar, VStack, Spacer, IconButton } from "@chakra-ui/react";
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import React from "react";
+import {
+  Flex,
+  Text,
+  Avatar,
+  VStack,
+  Spacer,
+  IconButton,
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
-export const UserBadge = ({ username, role, showDropdown, avatarPosition, avatarSize, roleFontWeight }) => {
+export const UserBadge = ({
+  username,
+  role,
+  showDropdown,
+  avatarPosition,
+  avatarSize,
+  roleFontWeight,
+}) => {
   const flexDirection = avatarPosition === "right" ? "row-reverse" : "row";
   const align = avatarPosition === "right" ? "start" : "end";
 
-
   return (
     <Flex alignItems="center" flexDirection={flexDirection}>
-        {showDropdown && (
+      {showDropdown && (
         <IconButton
           icon={<ChevronDownIcon />}
           isRound
@@ -19,8 +32,16 @@ export const UserBadge = ({ username, role, showDropdown, avatarPosition, avatar
         />
       )}
       <VStack mr={2} spacing={0} align={align} mx={2}>
-        <Text fontSize="xs" fontWeight={roleFontWeight} color="neutrals.gray.steel">{role}</Text>
-        <Text fontSize="md" fontWeight="bold" color="neutrals.gray.navy" mt={1}>{username}</Text>
+        <Text
+          fontSize="xs"
+          fontWeight={roleFontWeight}
+          color="neutrals.gray.steel"
+        >
+          {role}
+        </Text>
+        <Text fontSize="md" fontWeight="bold" color="neutrals.gray.navy" mt={1}>
+          {username}
+        </Text>
       </VStack>
       <Avatar
         aria-label="User avatar"

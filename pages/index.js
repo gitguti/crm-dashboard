@@ -2,15 +2,9 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
   Button,
   Heading,
   Flex,
-  Link,
-  Icon,
   Text,
   Grid,
   GridItem,
@@ -33,42 +27,15 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-import {
-  ArrowForwardIcon,
-  Search2Icon,
-  DragHandleIcon,
-  HamburgerIcon,
-  AddIcon,
-  ExternalLinkIcon,
-  RepeatIcon,
-  EditIcon,
-  ArrowDownIcon,
-  ChevronRightIcon
-} from "@chakra-ui/icons";
-import { checkboxAnatomy } from "@chakra-ui/anatomy";
-import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react";
+import { Search2Icon, DragHandleIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { Sidebar } from "../components/Sidebar";
-import {TaskBadge} from "../components/TaskBadge";
-import {UserBadge} from "../components/UserBadge";
+import { TaskBadge } from "../components/TaskBadge";
+import { UserBadge } from "../components/UserBadge";
 import { TimeTrackingCollapse } from "@/components/TimeTrackingCollapse";
 import { TimeTrackingResume } from "@/components/TimeTrackingResume";
 import { TaskDescription } from "@/components/TaskDescription";
-import {TaskDescriptionResume} from "@/components/TaskDescriptionResume"
-
-
-const { definePartsStyle, defineMultiStyleConfig } =
-  createMultiStyleConfigHelpers(checkboxAnatomy.keys);
-
-const circular = definePartsStyle({
-  control: defineStyle({
-    rounded: "full",
-  }),
-});
-
-export const checkboxTheme = defineMultiStyleConfig({
-  variants: { circular },
-});
+import { TaskDescriptionResume } from "@/components/TaskDescriptionResume";
 
 export default function Home() {
   const [collapse, setCollapse] = useState({ index: null, state: false });
@@ -593,31 +560,25 @@ export default function Home() {
             bg="neutrals.light.100"
           >
             <Flex justifyContent="space-between">
-              <TaskBadge/>
+              <TaskBadge />
               <Center>
-              <Divider orientation="vertical" height="20px"/>
+                <Divider orientation="vertical" height="20px" />
               </Center>
-              <UserBadge username="Kolin F." role="User" showDropdown={true} avatarPosition="right" avatarSize="sm" roleFontWeight="bold" />            </Flex>
-
-            <TimeTrackingCollapse/>
-          
-          
+              <UserBadge
+                username="Kolin F."
+                role="User"
+                showDropdown={true}
+                avatarPosition="right"
+                avatarSize="sm"
+                roleFontWeight="bold"
+              />{" "}
+            </Flex>
+            <TimeTrackingCollapse />
             <HStack mt={0}>
-              {/* <Text fontSize="2xl" fontWeight="bold">
-                Task Description
-              </Text>
-              <Spacer />
-              <IconButton
-                aria-label="Search database"
-                bgColor="brand.primary.default"
-                icon={<Search2Icon />}
-                color="neutrals.light.100"
-              /> */}
-              <TaskDescription/>
+              <TaskDescription />
             </HStack>
-           
-           <TaskDescriptionResume/>
-           
+
+            <TaskDescriptionResume />
           </Flex>
         </Flex>
       </Flex>
