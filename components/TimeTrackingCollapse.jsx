@@ -17,6 +17,7 @@ export const TimeTrackingCollapse = ({ taskSelect }) => {
             color="brand.primary.default"
             fontSize="sm"
             rounded="full"
+            size="sm"
             rightIcon={<ChevronRightIcon color="neutrals.gray.navy" />}
           >
             Hide Window

@@ -78,7 +78,7 @@ export const TimeTrackingResume = ({  taskSelect = {} }) => {
               <HStack>
                 <IconButton
                   aria-label="Pause task"
-                  bgColor="brand.primary.default"
+                  variant="primary"
                   icon={<MdPause />}
                   rounded="full"
                   color="neutrals.light.100"
